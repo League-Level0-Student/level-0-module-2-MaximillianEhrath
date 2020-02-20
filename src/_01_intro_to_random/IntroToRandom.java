@@ -9,7 +9,9 @@ public class IntroToRandom {
 	public static void main(String[] args) {
 		
 		int num = 0;
-		
+		Random rand = new Random();
+		num = rand.nextInt((88 - -222)+1) -222;
+		System.out.println(num);
 		//3   Now to make num random. 
 		//3a. Create an object of the Random class, Hint: Random ran = new Random()
 		
