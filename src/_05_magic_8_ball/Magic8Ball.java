@@ -3,11 +3,23 @@
 
 
 package _05_magic_8_ball;
-
+import java.util.Scanner;
 import java.util.Random;
 
 public class Magic8Ball {
+    public static void main(String[] args) {
+        String answers[] = {
+                "Yes","No","Maybe you should ask Google?","I am a Pokemon"
+        };
 
+        System.out.println();
+        String s;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a question");
+        s = sc.nextLine();
+        int eightball = new Random().nextInt(4);
+        System.out.println("eightball says "+answers[eightball]);
+    }
 	// 1. Make a main method that includes all the steps below….
 
 	// 2. Make a variable that will hold a random number and put a random number into this variable using "new Random().nextInt(4)"
