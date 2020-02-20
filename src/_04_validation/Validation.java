@@ -9,12 +9,15 @@ import javax.swing.JOptionPane;
 
 public class Validation {
 	public static void main(String[] args) {
-		
+		String compliments[] = {
+				"You are awesome","I like you","You're cool","You are nice","You're the best"
+		};
 		Random randomMaker = new Random();
-		
-		int randomNumber = randomMaker.nextInt(5);
-		
-		System.out.println(randomNumber);
+		for(int i=0; i<5; i++) {
+			int randomNumber = randomMaker.nextInt(5);
+
+			System.out.println(compliments[randomNumber]);
+		}
 
 		// 1. Use each value of randomNumber to give the user a random compliment.
 
