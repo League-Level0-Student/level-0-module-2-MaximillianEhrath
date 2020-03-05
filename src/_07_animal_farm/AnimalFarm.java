@@ -4,6 +4,10 @@
 package _07_animal_farm;
 
 import java.applet.AudioClip;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 //Copyright (c) The League of Amazing Programmers 2013-2017
 
@@ -14,12 +18,29 @@ import javax.swing.JOptionPane;
 
 public class AnimalFarm {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 			
 		/* 1. Ask the user which animal they want, then play the sound of that animal. */			 
 			
 		/* 2. Make it so that the user can keep entering new animals. */
 
+		BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+		String s = bufferRead.readLine();
+		if( s.equals("duck")){
+			playQuack();
+		}
+		else if( s.equals("cow")){
+			playMoo();
+		}
+		else if( s.equals("cat")){
+			playWoof();
+		}
+		else if( s.equals("dog")){
+			playMeow();
+		}
+		else if( s.equals("llama")){
+			playLlama();
+		}
 	}
 
 	static void playMoo() {
